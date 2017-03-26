@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CPU VISUALIZATION .V1</title>
+
+  <!-- CSS -->
+  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<!--   <link href="css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/bootstrap/docs.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/timeline/simpleTimeline.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="bs-docs-nav navbar navbar-inverse navbar-static-top" id="top">
+    <div class="container">
+      <div class="navbar-header">
+
+        <a href="../" class="navbar-brand">CPU VISUALIZATION .V1</a>
+      </div>
+      <nav class="" id="bs-navbar">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li class="active">
+            <a href="fcfs.html">FCFS</a>
+          </li>
+
+          <li class="">
+            <a href="sjf.html">SJF</a>
+          </li>
+
+          <li class="">
+            <a href="srtf.html">SRTF</a>
+          </li>
+
+          <li class="">
+            <a href="ps.html">PS</a>
+          </li>
+
+          <li class="">
+            <a href="rr.html">RR</a>
+          </li> 
+        
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- About -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1>FCFS [DONE] </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Timeline -->
+    <div class="row">
+      <div class="col-md-12">
+          <div id="timeline"></div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- Form -->
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form-horizontal" id="fcfs_form" onsubmit="submit_fcfs(event)">
+
+          <div class="form-group">
+            <label class="col-sm-1 ">Process</label>
+            <label class="col-sm-1 ">Order</label>
+            <label class="col-sm-2 ">Burst time</label>
+          </div>
+
+          <hr>
+
+          <!-- P1 -->
+          <div class="form-group">
+            <label class="col-sm-1 ">P1</label>
+            <div class="col-sm-1">
+              <input type="text" class="form-control" value="1" readonly>
+            </div>
+             <div class="col-sm-1">
+              <input type="text" class="form-control" id="p1_burst" numeric required>
+            </div>
+          </div>
+
+          <!-- P2 -->
+          <div class="form-group">
+            <label class="col-sm-1">P2</label>
+            <div class="col-sm-1">
+              <input type="text" class="form-control" value="2" readonly>
+            </div>
+             <div class="col-sm-1">
+              <input type="text" class="form-control" id="p2_burst" numeric required>
+            </div>
+          </div>
+
+          <!-- P3 -->
+          <div class="form-group">
+            <label class="col-sm-1">P3</label>
+            <div class="col-sm-1">
+              <input type="text" class="form-control" value="3" readonly>
+            </div>
+             <div class="col-sm-1">
+              <input type="text" class="form-control" id="p3_burst" numeric required>
+            </div>
+          </div>
+
+           <!-- P4 -->
+          <div class="form-group">
+            <label class="col-sm-1">P4</label>
+            <div class="col-sm-1">
+              <input type="text" class="form-control" value="4" readonly>
+            </div>
+             <div class="col-sm-1">
+              <input type="text" class="form-control" id="p4_burst" numeric required>
+            </div>
+          </div>
+
+           <!-- P5 -->
+          <div class="form-group">
+            <label class="col-sm-1">P5</label>
+            <div class="col-sm-1">
+              <input type="text" class="form-control" value="5" readonly>
+            </div>
+             <div class="col-sm-1">
+              <input type="text" class="form-control" id="p5_burst" numeric required>
+            </div>
+          </div>
+         
+          <div class="form-group">  
+            <div class="col-sm-offset-1 col-sm-11">
+              <button type="submit" class="btn btn-primary">Calculate</button>
+            </div>
+          </div>  
+        </form> 
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/timeline/resize.js"></script>
+  <script src="js/timeline/simpleTimeline.js"></script>
+
+  <script src="js/fcfs.js"></script>
+</body>
+</html>

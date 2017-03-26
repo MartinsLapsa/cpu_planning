@@ -1,0 +1,39 @@
+#timeline {
+  position: relative;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid dimgray;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  display: none;
+}
+      
+#timeline .selected {
+  font-weight: bold;
+  box-shadow: 0px 0px 3px 1px gray;
+}
+
+.style--p1 {
+  color: darkgreen;
+  background-color: lightgreen;
+}
+
+.style--p2 {
+  color: darkred;
+  background-color: mistyrose;
+}
+
+.style--p3 {
+  color: darkblue;
+  background-color: lightblue;
+}
+
+ .style--p4 {
+  color: darkgrey;
+  background-color: lightgrey;
+}
+
+ .style--p5 {
+  color: orange;
+  background-color: yellow;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CPU VISUALIZATION .V1</title>
+
+  <!-- CSS -->
+  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<!--   <link href="css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/bootstrap/docs.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/timeline/simpleTimeline.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="bs-docs-nav navbar navbar-inverse navbar-static-top" id="top">
+    <div class="container">
+      <div class="navbar-header">
+
+        <a href="../" class="navbar-brand">CPU VISUALIZATION .V1</a>
+      </div>
+      <nav class="" id="bs-navbar">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="">
+            <a href="fcfs.html">FCFS</a>
+          </li>
+
+          <li class="">
+            <a href="sjf.html">SJF</a>
+          </li>
+
+          <li class="active">
+            <a href="srtf.html">SRTF</a>
+          </li>
+
+          <li class="">
+            <a href="ps.html">PS</a>
+          </li>
+
+          <li class="">
+            <a href="rr.html">RR</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- About -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1>SRTF</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Timeline -->
+    <div class="row">
+      <div class="col-md-12">
+          <div id="timeline"></div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- Form -->
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form-horizontal" id="fcfs_form" onsubmit="submit_fcfs(event)">
+
+          <div class="form-group">
+            <label class="col-sm-1 ">Process</label>
+            <label class="col-sm-1 ">Arrival time</label>
+            <label class="col-sm-2 ">Burst time</label>
+          </div>
+
+          <hr>
+
+          <!-- P1 -->
+          <div class="form-group process">
+            <label class="col-sm-1 ">P1</label>
+            <div class="col-sm-1">
+              <input type="text" class="arrival form-control" value="0" numeric required />
+            </div>
+             <div class="col-sm-1">
+              <input type="text" class="burst form-control" value="4" numeric required />
+            </div>
+          </div>
+
+          <!-- P2 -->
+          <div class="form-group process">
+            <label class="col-sm-1 ">P2</label>
+            <div class="col-sm-1">
+              <input type="text" class="arrival form-control" value="1" numeric required />
+            </div>
+             <div class="col-sm-1">
+              <input type="text" class="burst form-control" value="2" numeric required />
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="col-sm-offset-1 col-sm-11">
+              <button type="button" class="btn btn-primary">Calculate</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/timeline/resize.js"></script>
+  <script src="js/timeline/simpleTimeline.js"></script>
+  <script src="js/lodash.min.js"></script>
+
+  <script src="js/srtf.js"></script>
+</body>
+</html>
