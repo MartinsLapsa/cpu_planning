@@ -42,7 +42,7 @@ function submit_fcfs(e){
 	var options = {
 	    phases: [
 	      { start: 0, end: burst_sum, indicatorsEvery: 1, share: 1 },
-	    ],
+	    ],    
 	    barHeight: 45,
 	    fontSize: 16
 	  };
@@ -63,7 +63,7 @@ function submit_fcfs(e){
 
   var timeline = $('#timeline');
     timeline.show();
-  timeline.simpleTimeline(options, data);
+  timeline.simpleTimeline(options, data);    
 
 
 
