@@ -27,7 +27,7 @@
       </div>
       <nav class="" id="bs-navbar">
         <ul class="nav navbar-nav navbar-right">
-          
+
           <li class="">
             <a href="fcfs.html">FCFS</a>
           </li>
@@ -46,8 +46,8 @@
 
           <li class="active">
             <a href="rr.html">RR</a>
-          </li> 
-        
+          </li>
+
         </ul>
       </nav>
     </div>
@@ -58,10 +58,7 @@
     <!-- About -->
     <div class="row">
       <div class="col-md-12">
-        <h1>RR</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <h1>Round Robin</h1>
       </div>
     </div>
 
@@ -74,16 +71,76 @@
       </div>
     </div>
 
-    <br><br>
+    <br>
 
     <!-- Form -->
     <div class="row">
       <div class="col-md-12">
-        <form class="form-horizontal" id="rr_form" onsubmit="submit_rr(event)">
+        <form class="form form-horizontal" id="fcfs_form" onsubmit="submit_fcfs(event)">
 
-        </form> 
+          <div class="form-group">
+            <label class="col-sm-1">Process</label>
+            <label class="col-sm-1">Arrive</label>
+            <label class="col-sm-1">Burst</label>
+            <label class="col-sm-1">Quantum</label>
+          </div>
+
+          <!-- P1 -->
+          <div class="form-group process">
+            <label class="col-sm-1 ">P1</label>
+            <div class="col-sm-1">
+              <input type="text" name="arrival" class="burst form-control" value="0" numeric />
+            </div>
+            <div class="col-sm-1">
+              <input type="text" name="burst" class="burst form-control" value="14" numeric />
+            </div>
+            <div class="col-sm-1">
+              <input type="text" name="quantum" class="burst form-control" value="3" numeric />
+            </div>
+          </div>
+
+          <!-- P2 -->
+          <div class="form-group process">
+            <label class="col-sm-1 ">P2</label>
+            <div class="col-sm-1">
+              <input type="text" name="arrival" class="burst form-control" value="0" numeric />
+            </div>
+            <div class="col-sm-1">
+              <input type="text" name="burst" class="burst form-control" value="2" numeric />
+            </div>
+          </div>
+
+          <!-- P3 -->
+          <div class="form-group process">
+            <label class="col-sm-1 ">P3</label>
+            <div class="col-sm-1">
+              <input type="text" name="arrival" class="burst form-control" value="0" numeric />
+            </div>
+            <div class="col-sm-1">
+              <input type="text" name="burst" class="burst form-control" value="3" numeric />
+            </div>
+          </div>
+
+          <!-- P4 -->
+          <div class="form-group process">
+            <label class="col-sm-1 ">P4</label>
+            <div class="col-sm-1">
+              <input type="text" name="arrival" class="burst form-control" value="7" numeric />
+            </div>
+            <div class="col-sm-1">
+              <input type="text" name="burst" class="burst form-control" value="7" numeric />
+            </div>
+          </div>
+        </form>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" class="submit btn btn-primary">Calculate</button>
+          </div>
+        </div>
       </div>
     </div>
+
 
   </div>
 
@@ -92,7 +149,9 @@
   <script src="js/bootstrap/bootstrap.min.js"></script>
   <script src="js/timeline/resize.js"></script>
   <script src="js/timeline/simpleTimeline.js"></script>
+  <script src="js/lodash.min.js"></script>
 
+  <script src="js/visualizer.js"></script>
   <script src="js/rr.js"></script>
 </body>
 </html>

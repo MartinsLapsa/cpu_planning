@@ -1,15 +1,13 @@
 class Srtf extends Visualizer{
   getProcessKey() {
-    var key = null;
-    var step = this.step;
-    var justArrived = _.filter(this.processes, function(p) {
-      return p.arrival === step;
-    });
-    var previousProcess = this.previousProcess();
+    let key = null;
+    let step = this.step;
+    let justArrived = _.filter(this.processes, p => p.arrival === step);
+    let previousProcess = this.previousProcess();
 
     if ( !previousProcess || previousProcess.burst === 0 ) {
-      var waiting = _.filter(this.processes, function(p) { return p.arrival <= step && p.burst > 0 });
-      var shortest =  _.orderBy(waiting, 'burst')[0];
+      let waiting = _.filter(this.processes, p => { return p.arrival <= step && p.burst > 0 });
+      let shortest =  _.orderBy(waiting, 'burst')[0];
       key = shortest ? shortest.key : null;
     }
     else if ( justArrived.length ) {

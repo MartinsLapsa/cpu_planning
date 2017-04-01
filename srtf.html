@@ -58,10 +58,7 @@
     <!-- About -->
     <div class="row">
       <div class="col-md-12">
-        <h1>SRTF [DONE]</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <h1>Shortest Remaining Time First</h1>
       </div>
     </div>
 
@@ -74,12 +71,12 @@
       </div>
     </div>
 
-    <br><br>
+    <br>
 
     <!-- Form -->
     <div class="row">
       <div class="col-md-12">
-        <form class="form form-horizontal" id="fcfs_form" onsubmit="submit_fcfs(event)">
+        <form class="form form-horizontal" id="fcfs_form">
 
           <div class="form-group">
             <label class="col-sm-1 ">Process</label>
@@ -104,7 +101,7 @@
           <div class="form-group process">
             <label class="col-sm-1 ">P2</label>
             <div class="col-sm-1">
-              <input type="text" name="arrival" class="arrival form-control" value="1" numeric required />
+              <input type="text" name="arrival" class="arrival form-control" value="0" numeric required />
             </div>
              <div class="col-sm-1 col-sm-offset-1">
               <input type="text" name="burst" class="burst form-control" value="2" numeric required />
@@ -115,10 +112,10 @@
           <div class="form-group process">
             <label class="col-sm-1 ">P3</label>
             <div class="col-sm-1">
-              <input type="text" name="arrival" class="arrival form-control" value="" numeric required />
+              <input type="text" name="arrival" class="arrival form-control" value="3" numeric required />
             </div>
              <div class="col-sm-1 col-sm-offset-1">
-              <input type="text" name="burst" class="burst form-control" value="" numeric required />
+              <input type="text" name="burst" class="burst form-control" value="3" numeric required />
             </div>
           </div>
 
@@ -126,10 +123,10 @@
           <div class="form-group process">
             <label class="col-sm-1 ">P4</label>
             <div class="col-sm-1">
-              <input type="text" name="arrival" class="arrival form-control" value="" numeric required />
+              <input type="text" name="arrival" class="arrival form-control" value="4" numeric required />
             </div>
              <div class="col-sm-1 col-sm-offset-1">
-              <input type="text" name="burst" class="burst form-control" value="" numeric required />
+              <input type="text" name="burst" class="burst form-control" value="1" numeric required />
             </div>
           </div>
         </form>

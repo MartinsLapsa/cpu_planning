@@ -30,27 +30,27 @@ class Visualizer {
   }
 
   resetProcesses() {
-    var processes = {};
+    let processes = {};
 
     $('.process').each(function(k){
-      var $this = $(this);
-      var params = {};
+      let $this = $(this);
+      let params = {};
 
       $this.find('input').each(function() {
         params[this.name] = parseInt(this.value);
       });
 
-      if ( _.every(params, function(p) { return !isNaN(p) }) ) {
+      if (_.every(params, p => !isNaN(p))) {
         processes[k] = _.merge(params, {key: k});
       }
     });
 
     this.processes = processes;
-    this.steps = _.reduce(this.processes, function(sum, p) { return sum + p.burst }, 0);
+    this.steps = _.reduce(this.processes, (sum, p) => { return sum + p.burst }, 0);
   }
 
   performStep() {
-    var key = this.getProcessKey();
+    let key = this.getProcessKey();
 
     if ( key != null ) {
       if ( key === this.lastKey ) {
@@ -58,7 +58,7 @@ class Visualizer {
         this.data[this.data.length-1].end += 1;
       }
       else {
-        var p = {
+        let p = {
           start: this.step,
           end: this.step + 1,
           className: 'style--p' + (key+1),
@@ -79,7 +79,7 @@ class Visualizer {
   }
 
   showTimeline() {
-    var options = {
+    let options = {
       phases: [
         { start: 0, end: this.step, indicatorsEvery: 1, share: 1 }
       ],
@@ -87,23 +87,21 @@ class Visualizer {
       fontSize: 16
     }
 
-    var lines = _.groupBy(this.data, function(p) { return p.key });
+    let lines = _.groupBy(this.data, p => p.key);
 
-    _.each(lines, _.bind(function(parts, key) {
+    _.each(lines, (parts, key) => {
       lines[key].push({
         start: this.processes[key].arrival,
         end: _.maxBy(parts, "end").end,
         id: '',
         className: 'style--wait'
       });
-    }, this));
+    });
 
-    var data = _.toArray(lines);
-
-    console.table(data);
+    let data = _.toArray(lines);
 
     if (!this.timeline) {
-      var $timeline = $('#timeline').show();
+      let $timeline = $('#timeline').show();
       this.timeline = $timeline.simpleTimeline(options, data);
     }
     else {
