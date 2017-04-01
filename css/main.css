@@ -7,7 +7,7 @@
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
   display: none;
 }
-      
+
 #timeline .selected {
   font-weight: bold;
   box-shadow: 0px 0px 3px 1px gray;
@@ -36,4 +36,10 @@
  .style--p5 {
   color: orange;
   background-color: yellow;
+}
+
+.style--wait {
+  color: #000;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
